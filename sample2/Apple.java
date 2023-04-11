@@ -1,0 +1,3 @@
+interface Apple extends Shake {
+    
+}
