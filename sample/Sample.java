@@ -1,0 +1,3 @@
+class Sample implements Taglish {
+    
+}
