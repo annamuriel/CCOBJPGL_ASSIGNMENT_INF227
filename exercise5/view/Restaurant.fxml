@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestaurantController">
+   <children>
+      <Button fx:id="btn1" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #d42e12;" text="I love Chowking" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="118.0" fitWidth="112.0" layoutX="283.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/burgerking.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="106.0" fitWidth="100.0" layoutX="25.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chowking.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="152.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/jollibee.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="106.0" fitWidth="189.0" layoutX="374.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mcdo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="106.0" fitWidth="141.0" layoutX="536.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/wendys.png" />
+         </image></ImageView>
+      <Button fx:id="btn3" layoutX="278.0" layoutY="279.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #0066B2;" text="I love Burger King" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn2" layoutX="147.0" layoutY="279.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #231F20;" text="I love Jollibee" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn4" layoutX="414.0" layoutY="279.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #FFC700;" text="I love McDo" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn5" layoutX="546.0" layoutY="279.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #DD1438;" text="I love Wendys" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
+      <Label layoutX="185.0" layoutY="63.0" prefHeight="59.0" prefWidth="321.0" text="Choose your restaurant:">
+         <font>
+            <Font name="Comic Sans MS" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
