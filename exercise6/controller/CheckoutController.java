@@ -30,7 +30,7 @@ public class CheckoutController implements Initializable {
     @FXML
     private ChoiceBox<String> choicebox1, choicebox2, choicebox3, choicebox4;
 
-    private String[] quantity = { "1", "2", "3", "4" };
+    private String[] quantity = { "1", "2", "3" };
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -50,15 +50,15 @@ public class CheckoutController implements Initializable {
         Image walllamp = new Image(HomeController.wlamp.getProductImage());
         img3.setImage(walllamp);
 
-        name4.setText(HomeController.tlamp.getProductName());
-        price4.setText(Double.toString(HomeController.tlamp.getProductPrice()));
-        Image tablelamp = new Image(HomeController.tlamp.getProductImage());
-        img4.setImage(tablelamp);
+        name4.setText(HomeController.dlamp.getProductName());
+        price4.setText(Double.toString(HomeController.dlamp.getProductPrice()));
+        Image deskLamp = new Image(HomeController.dlamp.getProductImage());
+        img4.setImage(deskLamp);
 
         // Set default quantities in choicebox to 1
         choicebox1.setValue("1");
         choicebox2.setValue("1");
-        choicebox3.setValue("1");
+        choicebox3.setValue("1");   
         choicebox4.setValue("1");
 
         // Insert quantity array to choicebox
@@ -75,11 +75,11 @@ public class CheckoutController implements Initializable {
 
         // Set total initial amount
         double totalInitialAmount = 0.00;
-        if (HomeController.clamp.getProductStatus() || HomeController.blamp.getProductStatus() || HomeController.wlamp.getProductStatus()) {
+        if (HomeController.clamp.getProductStatus() || HomeController.blamp.getProductStatus() || HomeController.wlamp.getProductStatus() || HomeController.dlamp.getProductStatus ()) {
             totalInitialAmount = Double.parseDouble(choicebox1.getValue()) * HomeController.blamp.getProductPrice() +
-            +Double.parseDouble(choicebox2.getValue()) * HomeController.clamp.getProductPrice()
-            + Double.parseDouble(choicebox3.getValue()) * HomeController.wlamp.getProductPrice() 
-            + Double.parseDouble(choicebox4.getValue()) * HomeController.tlamp.getProductPrice();
+            + Double.parseDouble(choicebox2.getValue()) * HomeController.clamp.getProductPrice()
+            + Double.parseDouble(choicebox3.getValue()) * HomeController.wlamp.getProductPrice()
+            + Double.parseDouble(choicebox4.getValue()) * HomeController.dlamp.getProductPrice();
         }
      
         // Display total initial amount in total label
@@ -131,15 +131,16 @@ public class CheckoutController implements Initializable {
             }
         }
 
-        if (HomeController.tlamp.getProductStatus()) {
+        if (HomeController.dlamp.getProductStatus()) {
 
             double qty = Double.parseDouble(choicebox4.getValue());
-            item4Amount = HomeController.tlamp.getProductPrice() * qty;
+            item4Amount = HomeController.dlamp.getProductPrice() * qty;
 
-            if (source == choicebox3) {
-                item4Amount = HomeController.tlamp.getProductPrice() * qty;
+            if (source == choicebox4) {
+                item4Amount = HomeController.dlamp.getProductPrice() * qty;
             }
         }
+        
 
         // Compute total amount for all items chosen
         totalAmount = item1Amount + item2Amount + item3Amount + item4Amount;
@@ -148,3 +149,4 @@ public class CheckoutController implements Initializable {
         total.setText(Double.toString(totalAmount));
     }
 }
+
