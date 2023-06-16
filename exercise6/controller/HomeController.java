@@ -23,7 +23,7 @@ import alert.AlertMaker;
 public class HomeController implements Initializable {
 
     @FXML
-    Label name1, name2, name3, price1, price2, price3, price4;
+    Label name1, name2, name3, name4, price1, price2, price3, price4;
 
     @FXML
     ImageView img1, img2, img3, img4;
@@ -47,8 +47,8 @@ public class HomeController implements Initializable {
 
     static BedroomLamp blamp = new BedroomLamp();
     static CeilingLamp clamp = new CeilingLamp();
-    static WallLamp wlamp = new WallLamp();
-    static TableLamp tlamp = new TableLamp();
+    static WallLamp wlamp = new WallLamp(); 
+    static DeskLamp dlamp = new DeskLamp();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -87,16 +87,16 @@ public class HomeController implements Initializable {
         Image wallLamp = new Image(wlamp.getProductImage());
         img3.setImage(wallLamp);
 
-        // ============== TABLE LAMP ==================//
-        tlamp.setProductName("Table Lamp");
-        name3.setText(tlamp.getProductName());
+        // ============== DESK LAMP ==================//
+        dlamp.setProductName("Desk Lamp");
+        name4.setText(dlamp.getProductName());
 
-        tlamp.setProductPrice(15.00);
-        price3.setText(Double.toString(tlamp.getProductPrice()));
+        dlamp.setProductPrice(20.00);
+        price4.setText(Double.toString(dlamp.getProductPrice()));
 
-        tlamp.setProductImage("images/lamp4.jpg");
-        Image tableLamp = new Image(tlamp.getProductImage());
-        img3.setImage(tableLamp);
+        dlamp.setProductImage("images/lamp4.jpg");
+        Image deskLamp = new Image(wlamp.getProductImage());
+        img4.setImage(deskLamp);
 
         try {
             loader = new FXMLLoader(getClass().getResource("/view/Checkout.fxml"));
@@ -133,7 +133,7 @@ public class HomeController implements Initializable {
         }
 
         else if (sourceButton == button4) {
-            tlamp.setProductStatus(true);
+            dlamp.setProductStatus(true);
             checkoutController.addItem(checkoutController.pane4);
         }
     }
